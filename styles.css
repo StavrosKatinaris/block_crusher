@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    flex-direction: column; /* Place the score above the game grid */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px;
+}
+
+.score-container {
+    margin-bottom: 10px; /* Add some space between the score and the game grid */
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+    gap: 5px;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.cell {
+    width: 100%;
+    padding-bottom: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.cell.selected {
+    background-color: #8ac4d0;
+}
+
+.cell.matched {
+    visibility: hidden;
+}
